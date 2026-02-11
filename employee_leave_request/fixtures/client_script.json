@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Employee leave request2",
+  "enabled": 0,
+  "modified": "2026-02-11 13:09:44.169789",
+  "module": "Employee Leave Request",
+  "name": "Date diff and total days calculate",
+  "script": "frappe.ui.form.on('Employee leave request2', {\n    from_date(frm) {\n        calculate_days(frm);\n    },\n    to_date(frm) {\n        calculate_days(frm);\n    }\n});\n\nfunction calculate_days(frm) {\n    if (frm.doc.from_date && frm.doc.to_date) {\n        if (frm.doc.from_date > frm.doc.to_date) {\n            frappe.msgprint(__('From Date cannot be greater than To Date'));\n            frm.set_value('total_days', 0);\n            return;\n        }\n\n        let diff = frappe.datetime.get_day_diff(\n            frm.doc.to_date,\n            frm.doc.from_date\n        ) + 1;\n\n        frm.set_value('total_days', diff);\n    }\n}\n",
+  "view": "Form"
+ }
+]

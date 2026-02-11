@@ -242,3 +242,14 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+
+fixtures = [
+    {
+        "doctype": "Client Script",
+        "filters": [
+            ["name", "in", [
+                "Date diff and total days calculate"
+            ]]
+        ]
+    }
+]
