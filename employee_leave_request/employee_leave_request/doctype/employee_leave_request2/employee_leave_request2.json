@@ -1,0 +1,85 @@
+{
+ "actions": [],
+ "creation": "2026-02-11 11:13:14.527433",
+ "doctype": "DocType",
+ "document_type": "Other",
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "leave_type",
+  "status",
+  "column_break_pzae",
+  "from_date",
+  "to_date",
+  "total_days",
+  "reason"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "leave_type",
+   "fieldtype": "Select",
+   "label": "Leave Type",
+   "options": "\nCasual Leave\nSick Leave\nEarned Leave"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nDraft\nApproved\nRejected"
+  },
+  {
+   "fieldname": "column_break_pzae",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "reason",
+   "fieldtype": "Small Text",
+   "label": "Reason"
+  },
+  {
+   "fieldname": "total_days",
+   "fieldtype": "Int",
+   "label": "Total Days"
+  }
+ ],
+ "grid_page_length": 50,
+ "icon": "fa fa-cog",
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-02-11 12:14:47.069281",
+ "modified_by": "Administrator",
+ "module": "Employee Leave Request",
+ "name": "Employee leave request2",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
